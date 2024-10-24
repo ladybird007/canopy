@@ -314,6 +314,9 @@ h4 {
   background-image: url(../img/bg/bg-grey.png);
 }
 @media (max-width: 767px) {
+  .torn-edge {
+    margin-top: 47px;
+  }
   .torn-edge:before {
     top: -47px;
     height: 87px;
@@ -1075,6 +1078,46 @@ h4 {
   }
 }
 
+.nominate-provider {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1199px) {
+  .nominate-provider {
+    max-width: 728px;
+  }
+}
+@media (max-width: 767px) {
+  .nominate-provider {
+    padding-bottom: 57px;
+  }
+  .nominate-provider h1 {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .nominate-provider {
+    padding-bottom: 102px;
+  }
+  .nominate-provider .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nominate-provider h1 {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .nominate-provider {
+    max-width: 748px;
+    padding-bottom: 122px;
+  }
+  .nominate-provider h1 {
+    margin-top: 43px;
+  }
+}
+
 .contact-us {
   background-color: #E6E0DE;
 }
@@ -1197,25 +1240,22 @@ h4 {
           flex: 1;
   margin-top: 24px;
 }
-.contact-form .btn {
-  width: auto;
-  min-width: 150px;
-  font-size: 16px;
-}
 .contact-form label {
   display: block;
   line-height: 1.25;
   margin-bottom: 12px;
 }
-.contact-form input,
-.contact-form textarea {
+.contact-form input:not([type=checkbox]):not([type=submit]),
+.contact-form textarea,
+.contact-form select {
   width: 100%;
   border-radius: 30px;
   border: 2px solid #E6E0DE;
   padding-left: 22px;
   padding-right: 22px;
 }
-.contact-form input {
+.contact-form input:not([type=checkbox]):not([type=submit]),
+.contact-form select {
   height: 50px;
 }
 .contact-form textarea {
@@ -1223,6 +1263,33 @@ h4 {
   padding-top: 10px;
   padding-bottom: 10px;
   resize: none;
+}
+.contact-form .checkbox-wrap {
+  margin-top: 12px;
+  display: flex-inline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+.contact-form .btn {
+  width: auto;
+  min-width: 150px;
+  font-size: 16px;
+}
+.contact-form input[type=checkbox] {
+  margin-right: 15px;
+}
+.contact-form h5 {
+  color: #146262;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 38px;
+}
+.contact-form h5 + .row .col {
+  margin-top: 0;
 }
 
 .footer {
