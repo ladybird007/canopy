@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $white: #fff;
 $greyLight: #F7F5F4;
 $grey: #E6E0DE;
@@ -231,6 +233,10 @@ a {
     background-color: #377743;
     box-shadow: 20px 20px 0px 0px #E6E0DE;
   }
+  &--violet-white {
+    background-color: #1B2A51;
+    box-shadow: -20px 20px 0px 0px #E6E0DE;
+  }
 }
 
 h1 {
@@ -330,6 +336,14 @@ h5 {
    }
 }
 
+.turquoise-bg {
+  background-color: #146262;
+  color: $white;
+   * {
+    color: inherit;
+   }
+}
+
 .torn-edge {
   position: relative;
   
@@ -352,6 +366,12 @@ h5 {
     padding-top: 30px;
     &:before {
       background-image: url(../img/bg/bg-green.png);
+    }
+  }
+  &--turquoise {
+    padding-top: 30px;
+    &:before {
+      background-image: url(../img/bg/bg-turquoise.png);
     }
   }
   @media (max-width: 767px) {
@@ -395,7 +415,8 @@ h5 {
         height: 185px;
       }
     }
-    &--green {
+    &--green,
+    &--turquoise {
       margin-top: 70px;
       &:before {
         top: -70px;
@@ -1026,7 +1047,7 @@ h5 {
     &--green {
       background-color:#316A48;
       &:hover {
-        background-color: darken($color: #316A48, $amount: 10%)
+        background-color: color.scale(#316A48, $saturation: 30%);
       }
       @media (max-width: 767px) {
         border-radius: 30px 60px 20px 60px;
@@ -1035,7 +1056,7 @@ h5 {
     &--blue {
       background-color:#1B2A51;
       &:hover {
-        background-color: darken($color: #1B2A51, $amount: 10%)
+        background-color: color.scale(#1B2A51, $saturation: 50%);
       }
       @media (max-width: 767px) {
         border-radius: 60px 30px 60px 20px;
@@ -1044,7 +1065,7 @@ h5 {
     &--brown {
       background-color:#39291E;
       &:hover {
-        background-color: darken($color: #39291E, $amount: 10%)
+        background-color: color.scale(#39291E, $saturation: 30%);
       }
       @media (max-width: 767px) {
         border-radius: 40px 20px 40px 30px;
@@ -1053,7 +1074,7 @@ h5 {
     &--violet {
       background-color:#2D1D46;
       &:hover {
-        background-color: darken($color: #2D1D46, $amount: 10%)
+        background-color: color.scale(#2D1D46, $saturation: 50%);
       }
       @media (max-width: 767px) {
         border-radius: 20px 40px 30px 40px;
@@ -1293,6 +1314,8 @@ h5 {
   }
 }
 
+
+
 .login-link-block {
   width: 100%;
   height: 100%;
@@ -1308,7 +1331,7 @@ h5 {
   font-weight: 600;
   color: $white;
   &:hover {
-    background-color: darken($color: #146262, $amount: 10%)
+    background-color: color.scale(#146262, $saturation: 30%);
   }
   span {
     margin-top: 39px;
@@ -1471,6 +1494,11 @@ h5 {
   list-style: none;
   font-size: 16px;
   line-height: 1.5;
+  &:not(.check-list--two-columns) {
+    max-width: 634px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   &__title {
     display: inline-flex;
     align-items: center;
@@ -1507,7 +1535,6 @@ h5 {
 ///// Text Image Section /////
 
 .text-image-section {
-  
   line-height: 30px;
   padding-bottom: 35px;
   
@@ -1518,7 +1545,12 @@ h5 {
     overflow: hidden;
     width: 396px;
     height: 280px;
-    box-shadow: 20px 20px 0px 0px #498260;
+    .green-bg & {
+      box-shadow: 20px 20px 0px 0px #498260;
+    }
+    .turquoise-bg & {
+      box-shadow: 20px 20px 0px 0px #548787;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -1566,11 +1598,11 @@ h5 {
         }
       }
     }
-  }
+  } 
   @media (max-width: 480px) {
     &__img {
       width: 300px;
-      height: 212px;
+      height: 212px; 
     }
   }
   @media (min-width: 768px) {
@@ -1607,6 +1639,81 @@ h5 {
         flex-direction: row-reverse;
       }
     }
+  }
+}
+
+///// FAQ /////
+
+.faq {
+  @media (max-width: 1199px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 102px;
+    padding-bottom: 102px;
+  }
+}
+
+.accordion {
+  &__item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    & + .accordion__item {
+      border-top: 2px solid #B6C9C4;
+    }
+  }
+  &__btn {
+    position: relative;
+    font-size: 24px;
+    color: $greenText;
+    padding-right: 36px;
+  }
+  &__close {
+    position: absolute;
+    right: 0;
+    top: calc(50% + 6px);
+    transform: translateY(-50%);
+    height: 24px;
+    width: 24px;
+    transition: all 0.3s;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 12px;
+      border-radius: 2px;
+      background-color: #146262;
+      transition: all 0.3s;
+    }
+    &:before {
+      right: 7px;
+      transform: rotate(45deg);
+    }
+    &:after {
+      left: 7px;
+      transform: rotate(-45deg);
+    }
+    .opened & {
+      top: 50%;
+      &:before,
+      &:after {
+        height: 20px;
+      }
+      &:before {
+        right: 11px;
+      }
+      &:after {
+        left: 11px;
+      }
+    }
+  }
+  &__content {
+    display: none;
+    padding-top: 24px;
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
