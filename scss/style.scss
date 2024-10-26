@@ -246,6 +246,12 @@ h1 {
     font-size: 30px;
     line-height: 1.25;
   }
+  @media (min-width: 768px) {
+    &.small {
+      font-size: 40px;
+      line-height: 1.25;
+    }
+  }
 }
 h2 {
   font-family: $merriweather;
@@ -275,12 +281,27 @@ h3 {
   @media (max-width: 1199px) {
     font-size: 30px;
   }
+  strong {
+    font-weight: 900;
+  }
 }
 h4 {
   font-size: 30px;
   line-height: 1.2;
   margin-bottom: 29px;
 }
+h5 {
+  font-weight: 400;
+  line-height: 1.5;
+  color: $violet;
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
 
 .sub-title {
   line-height: 1.25;
@@ -296,6 +317,19 @@ h4 {
   color: $greenText;
 }
 
+
+.gradient-bg {
+  background: linear-gradient(180deg, #E3DFDC 0%, #F7F5F4 100%);
+}
+
+.green-bg {
+   background-color: #316A48;
+   color: $white;
+   * {
+    color: inherit;
+   }
+}
+
 .torn-edge {
   position: relative;
   
@@ -304,7 +338,6 @@ h4 {
     position: absolute;
     left: 0;
     right: 0;
-    
     background-repeat: repeat-x;
     background-position: 0 0;
     background-size: auto 100%;
@@ -315,31 +348,74 @@ h4 {
       background-image: url(../img/bg/bg-grey.png);
     }
   }
-  @media (max-width: 767px) {
-    margin-top: 47px;
+  &--green {
+    padding-top: 30px;
     &:before {
-      top: -47px;
-      height: 87px;
+      background-image: url(../img/bg/bg-green.png);
+    }
+  }
+  @media (max-width: 767px) {
+    &--grey {
+      margin-top: 47px;
+      &:before {
+        top: -47px;
+        height: 87px;
+      }
+    }
+    &--green {
+      margin-top: 70px;
+      &:before {
+        top: -70px;
+        height: 103px;
+      }
     }
   }
   @media (min-width: 768px) and (max-width: 1199px) {
-    margin-top: 70px;
-    &:before {
-      height: 143px;
-      top: -70px;
+    &--grey {
+      margin-top: 70px;
+      &:before {
+        height: 143px;
+        top: -70px;
+      }
     }
+    &--green {
+      margin-top: 70px;
+      &:before {
+        top: -70px;
+        height: 105px;
+      }
+    }
+    
   }
   @media (min-width: 1200px) {
-    margin-top: 90px;
-    &:before {
-      top: -90px;
-      height: 185px;
+    &--grey {
+      margin-top: 90px;
+      &:before {
+        top: -90px;
+        height: 185px;
+      }
+    }
+    &--green {
+      margin-top: 70px;
+      &:before {
+        top: -70px;
+        height: 105px;
+      }
     }
   }
 }
 
+
+
+
 .title-leaf {
+  & + h1 {
+    max-width: 946px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media (max-width: 767px) {
+    width: 20px;
     & + h1 {
       margin-top: 20px;
     }
@@ -646,6 +722,10 @@ h4 {
         padding-top: 57%;
         border-radius: 30px;
         margin-bottom: 70px;
+        &.banner__img--broker {
+          margin-top: 43px;
+          margin-bottom: 24px;
+        }
       }
       @media (min-width: 1200px) {
         width: 770px;
@@ -681,12 +761,6 @@ h4 {
       margin-top: 24px;
     }
     &--home {
-      @media (max-width: 1199px) and (min-width: 768px) {
-        width: 471px;
-        right: -5px;
-        padding: 30px 44px 30px 71px;
-        border-radius: 80px 40px 80px 20px;
-      }
       @media (max-width: 767px) {
         .banner__text {
           left: 0;
@@ -704,13 +778,14 @@ h4 {
           }
         }
       }
+      @media (min-width: 768px) and  (max-width: 1199px) {
+        width: 471px;
+        right: -5px;
+        padding: 30px 44px 30px 71px;
+        border-radius: 80px 40px 80px 20px;
+      }
     }
     &:not(.banner__text--home) {
-      @media (max-width: 1199px) and (min-width: 768px) {
-        h2 {
-          font-size: 30px;
-        }
-      }
       @media (max-width: 767px) {
         width: 216px;
         padding: 25px 18px 30px 20px;
@@ -719,18 +794,32 @@ h4 {
         bottom: 0;
         top: auto;
         left: 16px;
+        &.banner__text--broker {
+          top: 0;
+          bottom: auto;
+        }
         h2 {
           font-size: 16px;
           margin-top: 12px;
           line-height: 1.25;
         }
-
+        
       }
-      @media (min-width: 768px) {
+      @media (min-width: 768px) and (max-width: 1199px) {
         width: 483px;
         padding-left: 60px;
         padding-bottom: 70px;
+
+        h2 {
+          font-size: 30px;
+        }
       }
+    }
+    &--broker {
+      @media (min-width: 768px) and (max-width: 1199px) {
+        top: auto;
+        bottom: -15px;
+      } 
     }
     @media (max-width: 1199px) {
       h2 {
@@ -738,8 +827,12 @@ h4 {
       }
     }
     @media (min-width: 1200px) {
-      max-width: 601px;
+      width: 601px;
       right: -30px;
+      &--broker {
+        width: 625px;
+        padding-bottom: 72px;
+      }
     }
   }
 
@@ -762,8 +855,6 @@ h4 {
       }
     }
   }
-
-  
 
   @media (min-width: 768px) {
     padding-left: 29px;
@@ -866,10 +957,6 @@ h4 {
 }
 
 ///// Company Info /////
-
-.gradient-bg {
-  background: linear-gradient(180deg, #E3DFDC 0%, #F7F5F4 100%);
-}
 
 .company-info {
   max-width: 697px;
@@ -1359,6 +1446,167 @@ h4 {
   @media (min-width: 1200px) {
     max-width: 748px;
     padding-bottom: 122px;
+  }
+}
+
+.our-promise {
+  padding-bottom: 21px;
+  h3 {
+    font-weight: 400;
+  }
+  @media (max-width: 768px) {
+    h3 {
+      margin-bottom: 24px;
+    }
+  }
+  @media (min-width: 768px) {
+    padding-top: 59px;
+    h3 {
+      margin-bottom: 63px;
+    }
+  }
+}
+
+.check-list {
+  list-style: none;
+  font-size: 16px;
+  line-height: 1.5;
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url(../img/icons/check-mark.svg) no-repeat 50% 50% / 20px auto;
+      margin-right: 12px;
+    }
+  }
+ 
+  li {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+  @media (min-width: 768px) {
+    &--two-columns {
+      column-count: 2;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    &--two-columns {
+      column-gap: 52px
+    }
+  }
+  @media (min-width: 1200px) {
+    &--two-columns {
+      column-gap: 152px;
+    }
+  }
+}
+
+///// Text Image Section /////
+
+.text-image-section {
+  
+  line-height: 30px;
+  padding-bottom: 35px;
+  
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__img {
+    overflow: hidden;
+    width: 396px;
+    height: 280px;
+    box-shadow: 20px 20px 0px 0px #498260;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: inherit;
+    }
+  }
+  &__text {
+    max-width: 467px;
+  }
+  .row {
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 1199px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      
+    }
+  }
+  @media (max-width: 767px) {
+    font-size: 16px;
+    &__icon {
+      height: 20px;
+      margin-bottom: 20px;
+      img {
+        max-height: 100%;
+      }
+    }
+    .row {
+      padding-top: 36px;
+      padding-bottom: 60px;
+      gap: 50px;
+      padding-left: 6px;
+      padding-right: 6px;
+      &:nth-child(2n + 1) {
+        .text-image-section__img {
+          border-radius: 80px 40px 80px 20px;
+        }
+      }
+      &:nth-child(2n) {
+        .text-image-section__img {
+          border-radius: 20px 80px 40px 80px;
+        }
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    &__img {
+      width: 300px;
+      height: 212px;
+    }
+  }
+  @media (min-width: 768px) {
+    font-size: 20px;
+    &__icon {
+      margin-bottom: 36px;
+    }
+    .row {
+      &:nth-child(2n + 1) {
+        .text-image-section__img {
+          border-radius: 100px 35px 100px 20px;
+        }
+      }
+      &:nth-child(2n) {
+        .text-image-section__img {
+          border-radius: 35px 100px 20px 100px;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .row {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      gap: 40px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .row {
+      padding-top: 74px;
+      padding-bottom: 74px;
+      gap: 100px;
+      &:nth-child(2n) {
+        flex-direction: row-reverse;
+      }
+    }
   }
 }
 
