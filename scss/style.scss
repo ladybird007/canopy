@@ -205,6 +205,12 @@ a {
   &--small {
     height: 44px;
   }
+  &--rounded {
+    width: 59px;
+    height: 55px;
+    padding: 0;
+    justify-content: center;
+  }
 }
 
 .rounded-block {
@@ -237,6 +243,10 @@ a {
     background-color: #1B2A51;
     box-shadow: -20px 20px 0px 0px #E6E0DE;
   }
+  &--turquoise-white {
+    background-color: #146262;
+    box-shadow: 20px 20px 0px 0px #E6E0DE;
+  }
 }
 
 h1 {
@@ -245,6 +255,9 @@ h1 {
   line-height: 1;
   font-size: 48px;
   color: $greenText;
+  &.strong {
+    font-weight: 700;
+  }
   strong {
     font-weight: 900;
   }
@@ -772,6 +785,11 @@ h5 {
     color: $white;
     font-size: 20px;
     line-height: 1.5;
+    p {
+      & + p {
+        margin-top: 24px;
+      }
+    }
     h2 {
       margin-top: 20px;
     }
@@ -779,7 +797,7 @@ h5 {
       display: block;
     }
     .btn {
-      margin-top: 24px;
+      // margin-top: 24px;
     }
     &--home {
       @media (max-width: 767px) {
@@ -1120,7 +1138,7 @@ h5 {
         }
         &--brown {
           border-radius: 40px 20px 40px 30px;
-        }
+        } 
         &--violet {
           border-radius: 20px 40px 30px 40px;
         }

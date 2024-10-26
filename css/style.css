@@ -195,6 +195,14 @@ a {
 .btn--small {
   height: 44px;
 }
+.btn--rounded {
+  width: 59px;
+  height: 55px;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
 .rounded-block {
   position: relative;
@@ -231,6 +239,11 @@ a {
   -webkit-box-shadow: -20px 20px 0px 0px #E6E0DE;
           box-shadow: -20px 20px 0px 0px #E6E0DE;
 }
+.rounded-block--turquoise-white {
+  background-color: #146262;
+  -webkit-box-shadow: 20px 20px 0px 0px #E6E0DE;
+          box-shadow: 20px 20px 0px 0px #E6E0DE;
+}
 
 h1 {
   font-family: "Merriweather", serif;
@@ -238,6 +251,9 @@ h1 {
   line-height: 1;
   font-size: 48px;
   color: #146262;
+}
+h1.strong {
+  font-weight: 700;
 }
 h1 strong {
   font-weight: 900;
@@ -820,14 +836,14 @@ h5 {
   font-size: 20px;
   line-height: 1.5;
 }
+.banner__text p + p {
+  margin-top: 24px;
+}
 .banner__text h2 {
   margin-top: 20px;
 }
 .banner__text img {
   display: block;
-}
-.banner__text .btn {
-  margin-top: 24px;
 }
 @media (max-width: 767px) {
   .banner__text--home .banner__text {
