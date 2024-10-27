@@ -206,6 +206,10 @@ a:not(.btn) {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.btn img {
+  margin-left: 12px;
+  width: 14px;
+}
 
 .rounded-block {
   position: relative;
@@ -350,6 +354,10 @@ h5 {
   text-align: center;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 .text-semibold {
   font-weight: 600;
 }
@@ -373,16 +381,23 @@ h5 {
 
 .green-bg {
   background-color: #316A48;
-  color: #fff;
 }
-.green-bg * {
-  color: inherit;
+
+.light-green-bg {
+  background-color: #498260;
 }
 
 .turquoise-bg {
   background-color: #146262;
+}
+
+.green-bg,
+.light-green-bg,
+.turquoise-bg {
   color: #fff;
 }
+.green-bg *,
+.light-green-bg *,
 .turquoise-bg * {
   color: inherit;
 }
@@ -486,6 +501,10 @@ h5 {
   .title-leaf + h1 {
     margin-top: 43px;
   }
+}
+
+.small-content {
+  max-width: 666px;
 }
 
 @media (max-width: 1199px) {
@@ -1791,12 +1810,28 @@ h5 {
   }
 }
 
+.number-list {
+  list-style: none;
+}
+.number-list a {
+  color: inherit;
+}
+.number-list a:hover {
+  color: #2D1D46;
+}
+.number-list li {
+  margin-top: 36px;
+}
+
 .text-image-section {
   line-height: 30px;
   padding-bottom: 35px;
 }
 .text-image-section__title {
   margin-bottom: 20px;
+}
+.text-image-section__title .vision-plus-text {
+  height: 27px;
 }
 .text-image-section__img {
   overflow: hidden;
@@ -1806,6 +1841,10 @@ h5 {
 .green-bg .text-image-section__img {
   -webkit-box-shadow: 20px 20px 0px 0px #498260;
           box-shadow: 20px 20px 0px 0px #498260;
+}
+.light-green-bg .text-image-section__img {
+  -webkit-box-shadow: -20px 20px 0px 0px #316A48;
+          box-shadow: -20px 20px 0px 0px #316A48;
 }
 .turquoise-bg .text-image-section__img {
   -webkit-box-shadow: 20px 20px 0px 0px #548787;
@@ -1907,7 +1946,7 @@ h5 {
     padding-bottom: 74px;
     gap: 100px;
   }
-  .text-image-section .row:nth-child(2n) {
+  .text-image-section .row:nth-child(2n), .text-image-section .row--reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;

@@ -214,6 +214,10 @@ a {
     padding: 0;
     justify-content: center;
   }
+  img {
+    margin-left: 12px;
+    width: 14px;
+  }
 }
 
 .rounded-block {
@@ -337,6 +341,10 @@ h5 {
   text-align: center;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 .text-semibold {
   font-weight: 600;
 }
@@ -358,18 +366,23 @@ h5 {
 
 .green-bg {
    background-color: #316A48;
-   color: $white;
-   * {
-    color: inherit;
-   }
+}
+
+.light-green-bg {
+  background-color: #498260;
 }
 
 .turquoise-bg {
   background-color: #146262;
+}
+
+.green-bg,
+.light-green-bg, 
+.turquoise-bg{
   color: $white;
-   * {
-    color: inherit;
-   }
+  * {
+   color: inherit;
+  }
 }
 
 .torn-edge {
@@ -481,6 +494,11 @@ h5 {
   }
 }
 
+
+.small-content {
+  max-width: 666px;
+
+}
 
 ///// Header /////
 
@@ -1520,6 +1538,8 @@ h5 {
   }
 }
 
+///// Check / Number List /////
+
 .check-title-list {
   list-style: none;
   font-size: 16px;
@@ -1600,6 +1620,19 @@ h5 {
   }
 }
 
+.number-list {
+  list-style: none;
+  a {
+    color: inherit;
+    &:hover {
+      color: $violet;
+    }
+  }
+  li {
+    margin-top: 36px;
+  }
+}
+
 ///// Text Image Section /////
 
 .text-image-section {
@@ -1608,6 +1641,9 @@ h5 {
   
   &__title {
     margin-bottom: 20px;
+    .vision-plus-text {
+      height: 27px;
+    }
   }
   &__img {
     overflow: hidden;
@@ -1615,6 +1651,9 @@ h5 {
     height: 280px;
     .green-bg & {
       box-shadow: 20px 20px 0px 0px #498260;
+    }
+    .light-green-bg & {
+      box-shadow: -20px 20px 0px 0px #316A48;
     }
     .turquoise-bg & {
       box-shadow: 20px 20px 0px 0px #548787;
@@ -1716,7 +1755,8 @@ h5 {
       padding-top: 74px;
       padding-bottom: 74px;
       gap: 100px;
-      &:nth-child(2n) {
+      &:nth-child(2n),
+      &--reverse {
         flex-direction: row-reverse;
       }
     }
