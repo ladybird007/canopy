@@ -391,14 +391,26 @@ h5 {
   background-color: #146262;
 }
 
+.dark-brown-bg {
+  background-color: #39291E;
+}
+
+.brown-bg {
+  background-color: #5E4E43;
+}
+
 .green-bg,
 .light-green-bg,
-.turquoise-bg {
+.turquoise-bg,
+.dark-brown-bg,
+.brown-bg {
   color: #fff;
 }
 .green-bg *,
 .light-green-bg *,
-.turquoise-bg * {
+.turquoise-bg *,
+.dark-brown-bg *,
+.brown-bg * {
   color: inherit;
 }
 
@@ -956,6 +968,9 @@ h5 {
   .banner__text--broker {
     width: 625px;
     padding-bottom: 72px;
+  }
+  .banner__text--large {
+    width: 680px;
   }
 }
 .banner__text-pre-title {
@@ -1774,6 +1789,9 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 6px;
   padding-bottom: 6px;
 }
@@ -1807,6 +1825,15 @@ h5 {
   }
   .text-image-section .check-list {
     margin-top: 66px;
+  }
+  .check-list--small {
+    font-size: 20px;
+  }
+  .check-list--small li:before {
+    margin-right: 30px;
+  }
+  .text-image-section .check-list--small {
+    margin-top: 24px;
   }
 }
 

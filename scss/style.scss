@@ -376,9 +376,19 @@ h5 {
   background-color: #146262;
 }
 
+.dark-brown-bg {
+  background-color: #39291E;
+}
+
+.brown-bg {
+  background-color: #5E4E43;
+}
+
 .green-bg,
 .light-green-bg, 
-.turquoise-bg{
+.turquoise-bg,
+.dark-brown-bg,
+.brown-bg {
   color: $white;
   * {
    color: inherit;
@@ -901,6 +911,9 @@ h5 {
       &--broker {
         width: 625px;
         padding-bottom: 72px;
+      }
+      &--large {
+        width: 680px;
       }
     }
   }
@@ -1587,6 +1600,7 @@ h5 {
   line-height: 1.5;
   li {
     display: flex;
+    align-items: center;
     padding-top: 6px;
     padding-bottom: 6px;
     &:before {
@@ -1616,6 +1630,17 @@ h5 {
     }
     .text-image-section & {
       margin-top: 66px;
+    }
+    &--small {
+      font-size: 20px;
+      li {
+        &:before {
+          margin-right: 30px;
+        }
+      }
+      .text-image-section & {
+        margin-top: 24px;
+      }
     }
   }
 }
