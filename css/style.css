@@ -1773,6 +1773,9 @@ h5 {
   background: url(../img/icons/check-mark.svg) no-repeat 50% 50%/20px auto;
   margin-right: 12px;
 }
+.turquoise-bg .check-title-list__title:before, .green-bg .check-title-list__title:before, .brown-bg .check-title-list__title:before, .violet-bg .check-title-list__title:before, .dark-brown-bg .check-title-list__title:before {
+  background-image: url(../img/icons/check-mark-white.svg);
+}
 .check-title-list li {
   display: inline-block;
   margin-bottom: 24px;
@@ -1796,6 +1799,9 @@ h5 {
     -webkit-column-gap: 152px;
        -moz-column-gap: 152px;
             column-gap: 152px;
+  }
+  .text-image-section .check-title-list {
+    margin-top: 66px;
   }
 }
 
@@ -2028,6 +2034,13 @@ h5 {
   max-width: 1007px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.about-headline {
+  max-width: 901px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.25;
 }
 
 @media (max-width: 1199px) {
