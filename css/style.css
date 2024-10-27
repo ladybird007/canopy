@@ -315,13 +315,19 @@ h3 {
   line-height: 1;
   margin-bottom: 12px;
 }
+h3 strong {
+  font-weight: 900;
+}
 @media (max-width: 1199px) {
   h3 {
     font-size: 30px;
   }
 }
-h3 strong {
-  font-weight: 900;
+@media (min-width: 1199px) {
+  h3.small {
+    font-size: 30px;
+    line-height: 1.3;
+  }
 }
 
 h4 {
@@ -399,18 +405,30 @@ h5 {
   background-color: #5E4E43;
 }
 
+.violet-bg {
+  background-color: #2D1D46;
+}
+
+.light-violet-bg {
+  background-color: #584673;
+}
+
 .green-bg,
 .light-green-bg,
 .turquoise-bg,
 .dark-brown-bg,
-.brown-bg {
+.brown-bg,
+.violet-bg,
+.light-violet-bg {
   color: #fff;
 }
 .green-bg *,
 .light-green-bg *,
 .turquoise-bg *,
 .dark-brown-bg *,
-.brown-bg * {
+.brown-bg *,
+.violet-bg *,
+.light-violet-bg * {
   color: inherit;
 }
 
@@ -1813,6 +1831,9 @@ h5 {
        -moz-column-count: 2;
             column-count: 2;
   }
+  .text-image-section .check-list--no-top-margin {
+    margin-top: 0;
+  }
 }
 @media (min-width: 1200px) {
   .check-list {
@@ -1834,6 +1855,9 @@ h5 {
   }
   .text-image-section .check-list--small {
     margin-top: 24px;
+  }
+  .text-image-section .check-list--no-top-margin {
+    margin-top: 0;
   }
 }
 
@@ -1876,6 +1900,22 @@ h5 {
 .turquoise-bg .text-image-section__img {
   -webkit-box-shadow: 20px 20px 0px 0px #548787;
           box-shadow: 20px 20px 0px 0px #548787;
+}
+.dark-brown-bg .text-image-section__img {
+  -webkit-box-shadow: -20px 20px 0px 0px #5E4E43;
+          box-shadow: -20px 20px 0px 0px #5E4E43;
+}
+.brown-bg .text-image-section__img {
+  -webkit-box-shadow: 20px 20px 0px 0px #39291E;
+          box-shadow: 20px 20px 0px 0px #39291E;
+}
+.violet-bg .text-image-section__img {
+  -webkit-box-shadow: -20px 20px 0px 0px #584773;
+          box-shadow: -20px 20px 0px 0px #584773;
+}
+.light-violet-bg .text-image-section__img {
+  -webkit-box-shadow: 20px 20px 0px 0px #2D1D46;
+          box-shadow: 20px 20px 0px 0px #2D1D46;
 }
 .text-image-section__img img {
   width: 100%;
@@ -1968,6 +2008,9 @@ h5 {
   .text-image-section__text--large {
     max-width: 530px;
   }
+  .text-image-section__text--extra-large {
+    max-width: 654px;
+  }
   .text-image-section .row {
     padding-top: 74px;
     padding-bottom: 74px;
@@ -1979,6 +2022,12 @@ h5 {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+}
+
+.disability-headline {
+  max-width: 1007px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 1199px) {
