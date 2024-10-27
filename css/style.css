@@ -1925,6 +1925,9 @@ h5 {
 .contact-us {
   background-color: #E6E0DE;
 }
+.contact-us--torn {
+  background-color: #E6E0DE;
+}
 @media (max-width: 767px) {
   .contact-us {
     padding-top: 54px;
@@ -1944,6 +1947,10 @@ h5 {
   .contact-us {
     padding-top: 116px;
     padding-bottom: 116px;
+  }
+  .contact-us--torn {
+    padding-top: 30px;
+    margin-top: 136px;
   }
 }
 .contact-us__info {

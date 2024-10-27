@@ -1739,6 +1739,9 @@ h5 {
 
 .contact-us {
   background-color: $grey;
+  &--torn {
+    background-color: #E6E0DE;
+  }
   @media (max-width: 767px) {
     padding-top: 54px;
     padding-bottom: 70px;
@@ -1754,6 +1757,10 @@ h5 {
   @media (min-width: 1280px) {
     padding-top: 116px;
     padding-bottom: 116px;
+    &--torn {
+      padding-top: 30px;
+      margin-top: 136px;
+    }
   }
 
   &__info {
