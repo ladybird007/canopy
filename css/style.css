@@ -100,6 +100,9 @@ a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+a:not(.btn) {
+  color: #317676;
+}
 
 .container {
   max-width: 1260px;
@@ -226,6 +229,11 @@ a {
 }
 .rounded-block--green-white {
   background-color: #2D5147;
+  -webkit-box-shadow: 20px 20px 0px 0px #E6E0DE;
+          box-shadow: 20px 20px 0px 0px #E6E0DE;
+}
+.rounded-block--green2-white {
+  background-color: #316A48;
   -webkit-box-shadow: -20px 20px 0px 0px #E6E0DE;
           box-shadow: -20px 20px 0px 0px #E6E0DE;
 }
@@ -342,8 +350,16 @@ h5 {
   text-align: center;
 }
 
+.text-semibold {
+  font-weight: 600;
+}
+
 .text-medium {
   font-weight: 500;
+}
+
+.text-regular {
+  font-weight: 400;
 }
 
 .text-green {
@@ -1680,17 +1696,17 @@ h5 {
   }
 }
 
-.check-list {
+.check-title-list {
   list-style: none;
   font-size: 16px;
   line-height: 1.5;
 }
-.check-list:not(.check-list--two-columns) {
+.check-title-list:not(.check-title-list--two-columns) {
   max-width: 634px;
   margin-left: auto;
   margin-right: auto;
 }
-.check-list__title {
+.check-title-list__title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1698,16 +1714,61 @@ h5 {
       -ms-flex-align: center;
           align-items: center;
 }
-.check-list__title:before {
+.check-title-list__title:before {
   content: "";
   width: 24px;
   height: 24px;
   background: url(../img/icons/check-mark.svg) no-repeat 50% 50%/20px auto;
   margin-right: 12px;
 }
-.check-list li {
+.check-title-list li {
   display: inline-block;
   margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .check-title-list--two-columns {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .check-title-list--two-columns {
+    -webkit-column-gap: 52px;
+       -moz-column-gap: 52px;
+            column-gap: 52px;
+  }
+}
+@media (min-width: 1200px) {
+  .check-title-list--two-columns {
+    -webkit-column-gap: 152px;
+       -moz-column-gap: 152px;
+            column-gap: 152px;
+  }
+}
+
+.check-list {
+  list-style: none;
+  line-height: 1.5;
+}
+.check-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.check-list li:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../img/icons/check-mark-white.svg) no-repeat 50% 50%/20px auto;
+  margin-right: 12px;
+}
+@media (max-width: 1199px) {
+  .text-image-section .check-list {
+    margin-top: 36px;
+  }
 }
 @media (min-width: 768px) {
   .check-list--two-columns {
@@ -1716,18 +1777,17 @@ h5 {
             column-count: 2;
   }
 }
-@media (min-width: 768px) and (max-width: 1199px) {
-  .check-list--two-columns {
-    -webkit-column-gap: 52px;
-       -moz-column-gap: 52px;
-            column-gap: 52px;
-  }
-}
 @media (min-width: 1200px) {
+  .check-list {
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .check-list--two-columns {
-    -webkit-column-gap: 152px;
-       -moz-column-gap: 152px;
-            column-gap: 152px;
+    gap: 90px;
+  }
+  .text-image-section .check-list {
+    margin-top: 66px;
   }
 }
 
@@ -1760,6 +1820,9 @@ h5 {
 }
 .text-image-section__text {
   max-width: 467px;
+}
+.text-image-section__text p + p {
+  margin-top: 24px;
 }
 .text-image-section .row {
   -webkit-box-align: center;
@@ -1833,6 +1896,12 @@ h5 {
   }
 }
 @media (min-width: 1200px) {
+  .text-image-section__img--small {
+    width: 346px;
+  }
+  .text-image-section__text--large {
+    max-width: 530px;
+  }
   .text-image-section .row {
     padding-top: 74px;
     padding-bottom: 74px;
@@ -1882,6 +1951,7 @@ h5 {
   width: 24px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .accordion__close:before, .accordion__close:after {
   content: "";
@@ -1920,6 +1990,22 @@ h5 {
   padding-top: 24px;
   font-size: 16px;
   line-height: 1.5;
+}
+.accordion__content ul + p,
+.accordion__content p + ul {
+  margin-top: 24px;
+}
+.accordion__content ul {
+  padding-left: 20px;
+}
+.accordion__content a:not(.btn) {
+  font-weight: 600;
+}
+@media (min-width: 1200px) {
+  .accordion__content--text-large {
+    line-height: 1.22;
+    font-size: 18px;
+  }
 }
 
 .contact-us {

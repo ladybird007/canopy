@@ -113,6 +113,9 @@ a {
   text-decoration: none;
   color: inherit;
   transition: all 0.3s;
+  &:not(.btn) {
+    color: $greenLink;
+  }
 }
 
 ///// General //////
@@ -233,6 +236,10 @@ a {
   }
   &--green-white {
     background-color: $greenDark;
+    box-shadow: 20px 20px 0px 0px #E6E0DE;
+  }
+  &--green2-white {
+    background-color: #316A48;
     box-shadow: -20px 20px 0px 0px #E6E0DE;
   }
   &--light-green-white {
@@ -329,9 +336,17 @@ h5 {
 .text-center {
   text-align: center;
 }
+
+.text-semibold {
+  font-weight: 600;
+}
 .text-medium {
   font-weight: 500;
 }
+.text-regular {
+  font-weight: 400;
+}
+
 .text-green {
   color: $greenText;
 }
@@ -795,9 +810,6 @@ h5 {
     }
     img {
       display: block;
-    }
-    .btn {
-      // margin-top: 24px;
     }
     &--home {
       @media (max-width: 767px) {
@@ -1508,11 +1520,11 @@ h5 {
   }
 }
 
-.check-list {
+.check-title-list {
   list-style: none;
   font-size: 16px;
   line-height: 1.5;
-  &:not(.check-list--two-columns) {
+  &:not(.check-title-list--two-columns) {
     max-width: 634px;
     margin-left: auto;
     margin-right: auto;
@@ -1534,7 +1546,7 @@ h5 {
     margin-bottom: 24px;
   }
   @media (min-width: 768px) {
-    &--two-columns {
+    &--two-columns { 
       column-count: 2;
     }
   }
@@ -1550,11 +1562,49 @@ h5 {
   }
 }
 
+.check-list {
+  list-style: none;
+  line-height: 1.5;
+  li {
+    display: flex;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url(../img/icons/check-mark-white.svg) no-repeat 50% 50% / 20px auto;
+      margin-right: 12px;
+    }
+  }
+  @media (max-width: 1199px) {
+    .text-image-section & {
+      margin-top: 36px;
+    }
+  }
+  @media (min-width: 768px) {
+    &--two-columns {
+      column-count: 2;
+    }
+  }
+  @media (min-width: 1200px) {
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    &--two-columns {
+      gap: 90px;
+    }
+    .text-image-section & {
+      margin-top: 66px;
+    }
+  }
+}
+
 ///// Text Image Section /////
 
 .text-image-section {
   line-height: 30px;
-  padding-bottom: 35px;
+  padding-bottom: 35px; 
   
   &__title {
     margin-bottom: 20px;
@@ -1578,6 +1628,9 @@ h5 {
   }
   &__text {
     max-width: 467px;
+    p + p {
+      margin-top: 24px;
+    }
   }
   .row {
     align-items: center;
@@ -1649,6 +1702,16 @@ h5 {
     }
   }
   @media (min-width: 1200px) {
+    &__img {
+      &--small {
+        width: 346px;
+      }
+    }
+    &__text {
+      &--large {
+        max-width: 530px;
+      }
+    }
     .row {
       padding-top: 74px;
       padding-bottom: 74px;
@@ -1695,6 +1758,7 @@ h5 {
     height: 24px;
     width: 24px;
     transition: all 0.3s;
+    cursor: pointer;
     &:before,
     &:after {
       content: "";
@@ -1732,6 +1796,26 @@ h5 {
     padding-top: 24px;
     font-size: 16px;
     line-height: 1.5;
+
+    ul + p,
+    p + ul {
+      margin-top: 24px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a:not(.btn) {
+      font-weight: 600;
+    }
+
+    @media (min-width: 1200px) {
+      &--text-large {
+        line-height: 1.22;
+        font-size: 18px;
+      }
+    }
   }
 }
 
