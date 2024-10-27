@@ -2222,6 +2222,43 @@ h5 {
     grid-gap: 76px;
   }
 }
+.contact-us__detail {
+  font-size: 16px;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact-us__detail:not(.contact-us__detail:first-child) {
+  margin-top: 24px;
+}
+.contact-us__detail-icon {
+  width: 24px;
+  height: 36px;
+  margin-right: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact-us__detail h5 {
+  line-height: 36px;
+  margin-bottom: 5px;
+}
+.contact-us__detail p + p {
+  margin-top: 24px;
+}
+.contact-us__detail span {
+  display: block;
+}
+.contact-us__headline {
+  margin-bottom: 96px;
+}
 @media (max-width: 1279px) {
   .contact-us .sub-title {
     margin-bottom: 30px;

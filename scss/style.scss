@@ -2008,6 +2008,37 @@ h5 {
     }
   }
 
+  &__detail {
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    &:not(&:first-child) {
+      margin-top: 24px;
+    }
+    &-icon {
+      width: 24px;
+      height: 36px;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h5 {
+      line-height: 36px;
+      margin-bottom: 5px;
+    }
+    p + p {
+      margin-top: 24px;
+    }
+    span {
+      display: block;
+    }
+  }
+
+  &__headline {
+    margin-bottom: 96px;
+  }
+
   .sub-title {
     @media (max-width: 1279px) {
       margin-bottom: 30px;
