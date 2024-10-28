@@ -109,6 +109,9 @@ a:not(.btn) {
   margin-left: auto;
   margin-right: auto;
 }
+.container--narrow {
+  max-width: 883px;
+}
 @media (max-width: 991px) {
   .container {
     padding-left: 10px;
@@ -2352,6 +2355,54 @@ h5 {
 }
 .contact-form h5 + .row .col {
   margin-top: 0;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 2px solid #E3DFDC;
+  padding: 24px 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.search-results {
+  padding-bottom: 110px;
+}
+.search-results__item {
+  background-color: #fff;
+  border: 2px solid #E6E0DE;
+  padding: 29px 18px 23px 18px;
+  border-radius: 30px;
+}
+.search-results__item + .search-results__item {
+  margin-top: 27px;
+}
+.search-results__contact-info, .search-results__profession-info {
+  padding: 28px;
+}
+@media (min-width: 768px) {
+  .search-results__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .search-results__contact-info, .search-results__profession-info {
+    width: 50%;
+  }
+  .search-results__contact-info {
+    border-right: 2px solid #E3DFDC;
+  }
+  .search-results__profession-info {
+    padding-left: 56px;
+  }
 }
 
 .footer {

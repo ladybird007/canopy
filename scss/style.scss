@@ -125,6 +125,9 @@ a {
   max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
+  &--narrow {
+    max-width: 883px;
+  }
   @media (max-width: 991px) {
     padding-left: 10px;
     padding-right: 10px;
@@ -2125,6 +2128,50 @@ h5 {
         margin-top: 0;
       }
     } 
+  }
+}
+
+///// Search Results //////
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid #E3DFDC;
+  padding: 24px 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.search-results {
+  padding-bottom: 110px;
+  &__item {
+    background-color: $white;
+    border: 2px solid #E6E0DE;
+    padding: 29px 18px 23px 18px;
+    border-radius: 30px;
+    & + .search-results__item {
+      margin-top: 27px;
+    }
+  }
+  &__contact-info,
+  &__profession-info {
+    padding: 28px;
+  }
+  @media (min-width: 768px) {
+    &__item {
+      display: flex;
+    }
+    &__contact-info,
+    &__profession-info {
+      width: 50%;
+    }
+    &__contact-info {
+      border-right: 2px solid #E3DFDC;
+    }
+    &__profession-info {
+      padding-left: 56px;
+    }
   }
 }
 
