@@ -88,38 +88,40 @@
 
         <div class="tabs js-tabs">
           <div class="tabs__header">
-            <a href="#tabs-canopy-dental">Canopy Dental</a>
-            <a href="#tabs-canopy-vision">Canopy Vision</a>
-            <a href="#vision-plus">
-              <img src="img/vision-plus-green.svg" alt="Vision Plus">
-              <img src="img/icons/externallink.svg" alt="">
+            <a class="tabs__link active js-tabs-btn" href="#tabs-canopy-dental">Canopy Dental</a>
+            <a class="tabs__link js-tabs-btn" href="#tabs-canopy-vision">Canopy Vision</a>
+            <a class="tabs__link" href="#" target="_blank">
+              <span>
+                <img class="tabs__vision" src="img/vision-plus-green.svg" alt="Vision Plus">
+                <img src="img/icons/externallink.svg" alt="">
+              </span>
             </a>
           </div>
           <div class="tabs__content">
-            <div id="tabs-canopy-vision" class="tabs__item">
+            <div id="tabs-canopy-dental" class="tabs__item js-tabs-content">
               <div class="contact-form">
                 <form action="#">
                   <div class="row">
                     <div class="col">
-                      <label for="provider-name">Search by Provider or Practice Name</label>
-                      <input type="text" name="provider-name" id="provider-name"/>
+                      <label for="dental-provider-name">Search by Provider or Practice Name</label>
+                      <input type="text" name="dental-provider-name" id="dental-provider-name"/>
                     </div>
                   </div>
     
                   <div class="row">
                     <div class="col">
-                      <label for="email">Your Zip Code (Required)</label>
-                      <input type="number" name="zip" id="zip"/>
+                      <label for="dental-zip">Your Zip Code (Required)</label>
+                      <input type="number" name="dental-zip" id="dental-zip"/>
                     </div>
                     <div class="col">
-                      <label for="phone-number">Distance From Zip Code</label>
-                      <select name="distance" id="distance">
+                      <label for="dental-distance">Distance From Zip Code</label>
+                      <select name="dental-distance" id="dental-distance">
                         <option value="24">24 Miles</option>
                       </select>
                     </div>
                     <div class="col">
-                      <label for="phone-number">Sort Results By</label>
-                      <select name="sort" id="sort">
+                      <label for="dental-sort">Sort Results By</label>
+                      <select name="dental-sort" id="dental-sort">
                         <option value="distance">Distance</option>
                       </select>
                     </div>
@@ -127,8 +129,8 @@
     
                   <div class="row">
                     <div class="col col--half">
-                      <label for="phone-number">Specialties</label>
-                      <select name="specialties" id="specialties">
+                      <label for="dental-specialties">Specialties</label>
+                      <select name="dental-specialties" id="dental-specialties">
                         <option value="distance">All Specialties</option>
                       </select>
                     </div>
@@ -136,14 +138,67 @@
 
                   <div class="row">
                     <div class="col">
-                      <label for="phone-number">Results Per Page</label>
-                      <select name="results-per-page" id="results-per-page">
+                      <label for="dental-results-per-page">Results Per Page</label>
+                      <select name="dental-results-per-page" id="dental-results-per-page">
                         <option value="distance">25</option>
                       </select>
                     </div>
+                    <div class="col col--justify-end">
+                      <button class="btn btn--grey-green">Clear</button>
+                      <button type="submit" class="btn btn--green-white"><img src="img/icons/search-white.svg" alt="">Search</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id="tabs-canopy-vision" class="tabs__item js-tabs-content">
+              <div class="contact-form">
+                <form action="#">
+                  <div class="row">
                     <div class="col">
-                      <input type="submit" value="Clear" class="btn btn--white-green">
-                      <input type="submit" value="Submit" class="btn btn--green-white">
+                      <label for="vision-provider-name">Search by Provider or Practice Name</label>
+                      <input type="text" name="vision-provider-name" id="vision-provider-name"/>
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col">
+                      <label for="vision-zip">Your Zip Code (Required)</label>
+                      <input type="number" name="vision-zip" id="vision-zip"/>
+                    </div>
+                    <div class="col">
+                      <label for="vision-distance">Distance From Zip Code</label>
+                      <select name="vision-distance" id="vision-distance">
+                        <option value="24">24 Miles</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <label for="vision-sort">Sort Results By</label>
+                      <select name="vision-sort" id="vision-sort">
+                        <option value="distance">Distance</option>
+                      </select>
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col col--half">
+                      <label for="vision-specialties">Specialties</label>
+                      <select name="vision-specialties" id="vision-specialties">
+                        <option value="distance">All Specialties</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <label for="vision-results-per-page">Results Per Page</label>
+                      <select name="vision-results-per-page" id="vision-results-per-page">
+                        <option value="distance">25</option>
+                      </select>
+                    </div>
+                    <div class="col col--justify-end">
+                      <button class="btn btn--grey-green">Clear</button>
+                      <button type="submit" class="btn btn--green-white"><img src="img/icons/search-white.svg" alt="">Search</button>
                     </div>
                   </div>
                 </form>

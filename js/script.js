@@ -62,5 +62,20 @@
         parent.addClass('opened').find('.js-accordion-content').slideDown();
       }
     });
+
+    // Tabs
+    $('.js-tabs').on('click', '.js-tabs-btn', function(e){
+      e.preventDefault();
+
+      const dataHref = $(this).attr('href'),
+            parent = $(this).closest('.js-tabs');
+
+      
+      $('.js-tabs-content').hide(0);
+      $(parent).find('.active').removeClass('active');
+      $(dataHref).fadeIn(300);
+      $(this).addClass('active');
+    });
+
   })
 })(jQuery)
