@@ -89,20 +89,9 @@
       $(this).addClass('active');
     });
 
-    // Input 'tel' validate
-    function addDashes(f)
-    {
-      console.log(f.val());
-      let f_val = f.val();
-      return "("+f_val.substr(0,3)+")"+f_val.substr(3,3)+"-"+f_val.substr(3,4);
-    }
+    // Input 'tel' formatter  
 
-    // $('#phone-number').on('keydown', function() {
-    //   //$(this).val(addDashes($(this)));
-    //   $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
-    // });   
-    
-    $('#phone-number').on('keydown', function(e) {
+    $('.contact-form input[type="tel"]').on('keyup', function(e) {
       var output,
         $this = $(this),
         input = $this.val();

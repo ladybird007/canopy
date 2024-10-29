@@ -84,7 +84,7 @@
         <div class="banner__img">
           <img src="img/member/banner.jpg" alt="">
         </div>
-        <div class="rounded-block rounded-block--light-green-white rounded-block--big-reverse banner__text">
+        <div class="rounded-block rounded-block--light-green-white rounded-block--big-reverse banner__text banner__text--member">
           <div class="banner__text-pre-title">
             <img src="img/member/icon_leaf.svg" alt=""> Members
           </div>
@@ -210,7 +210,7 @@
                 <div class="row">
                   <div class="col">
                     <label for="provider-phone-number">Phone Number</label>
-                    <input type="tel" name="provider-phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(___) ___-___" id="provider-phone-number"/>
+                    <input type="tel" id="provider-phone-number" name="provider-phone-number" placeholder="(___) ___-___" maxlength="14"/>
                   </div>
 
                   <div class="col">
@@ -238,14 +238,14 @@
                   </div>
                   <div class="col">
                     <label for="your-phone-number">Phone Number</label>
-                    <input type="tel" name="your-phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(___) ___-___" id="your-phone-number"/>
+                    <input type="tel" id="your-phone-number" name="your-phone-number" placeholder="(___) ___-___" maxlength="14"/>
                   </div>
                 </div>
   
                 <div class="row">
                   <label class="checkbox-wrap">
                     <input type="checkbox">
-                    You can use my provided information when contacting this provider.
+                    <span>You can use my provided information when contacting this provider.</span>
                   </label>
                 </div>
   
@@ -297,7 +297,7 @@
                   </div>
                   <div class="col">
                     <label for="phone-number">Phone Number</label>
-                    <input type="tel" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(___) ___-___" id="phone-number"/>
+                    <input type="tel" name="phone-number" placeholder="(___) ___-___" id="phone-number" maxlength="14"/>
                   </div>
                 </div>
   
