@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canopy Insurance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__container">
+        <a href="index.html" class="logo">
+          <img src="img/logo.svg" alt="Canopy Insurance">
+        </a>
+        <nav class="header__nav js-nav">
+          <ul class="main-nav">
+            <li class="main-nav__item js-menu-btn">
+              <span>I am a</span>
+              <div class="main-nav__submenu js-menu">
+                <ul>
+                  <li><a href="member.html">Member</a></li>
+                  <li><a href="broker.html">Broker</a></li>
+                  <li><a href="employer.html">Employer</a></li>
+                  <li><a href="provider.html">Provider</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item js-menu-btn">
+              <span>Products</span>
+              <div class="main-nav__submenu js-menu">
+                <ul>
+                  <li><a href="vison.html">Vison</a></li>
+                  <li><a href="dental.html">Dental</a></li>
+                  <li><a href="accident-illness.html">Accident & Illness</a></li>
+                  <li><a href="disability-life.html">Disability & Life </a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item js-menu-btn">
+              <span>Resources</span>
+              <div class="main-nav__submenu js-menu">
+                <ul>
+                  <li><a href="provider-search.html">Provider Search</a></li>
+                  <li><a href="forms-faqs.html">Forms & FAQs</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item js-menu-btn">
+              <span>About Canopy</span>
+              <div class="main-nav__submenu js-menu">
+                <ul>
+                  <li><a href="about.html">Why Choose Us?</a></li>
+                  <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item main-nav__item--search">
+              <a href="provider-search.html">
+                <img src="img/icons/search.svg" alt="Search">
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__buttons">
+          <a href="provider-search.html" class="btn btn--violet-white mobile-invisible">Find a Provider ➔</a>
+          <a href="provider-search.html" class="btn btn--violet-white mobile-visible btn--search">Providers</a>
+          <a href="#" class="btn btn--white-green btn--login mobile-invisible">Login</a>
+          <span class="header__menu-btn js-mobile-nav-btn">
+            <em></em>
+          </span> 
+        </div>
+      </div>
+    </div><!-- .container -->
+  </header>
+
+  <div class="content">
+    <div class="container">
+      <div class="banner">
+        <div class="banner__img banner__img--home">
+          <img src="img/home/banner.jpg" alt="">
+        </div>
+        <div class="rounded-block rounded-block--green-white rounded-block--big banner__text banner__text--home">
+          <img src="img/home/icon_home.svg" alt="">
+          <h2>
+            Peace-of-mind <br>
+            coverage for families. <br>
+            <strong><em>All under one roof.</em></strong>
+          </h2>
+          <p class="desktop-visible">
+            Our insurance plans and policies are designed to meet 
+            the unique needs of families, ensuring they have 
+            the support they need to flourish in every stage of life.
+          </p>
+        </div>
+
+        <div class="secondary-menu-wrap">
+          <div class="secondary-menu">
+            <strong>I am a...</strong>
+            <a href="member.html">
+              <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 2.96152L4.00486 2.89198L4 2.92658V2.96152H4.5ZM1.00415 2.86133V3.36133H1.54297L1.50276 2.82401L1.00415 2.86133ZM1 2.86133V2.36133H0.5V2.86133H1ZM6.5 14.1613H7V13.8816L6.76161 13.7352L6.5 14.1613ZM6.5 18.8613H6V19.3613H6.5V18.8613ZM21.5 18.8613V19.3613H22V18.8613H21.5ZM16.3284 4.0329L16.682 3.67935L16.682 3.67935L16.3284 4.0329ZM16.3284 9.68976L16.682 10.0433V10.0433L16.3284 9.68976ZM10.6716 9.68976L11.0251 9.3362H11.0251L10.6716 9.68976ZM4.01473 2.75C4.01473 2.79837 4.01135 2.84574 4.00486 2.89198L4.99514 3.03106C5.00809 2.93886 5.01473 2.84502 5.01473 2.75H4.01473ZM2.76709 1.63867C3.50381 1.63867 4.01473 2.17177 4.01473 2.75H5.01473C5.01473 1.54841 3.98224 0.638672 2.76709 0.638672V1.63867ZM1.5 2.75C1.5 2.17865 2.02287 1.63867 2.76709 1.63867V0.638672C1.55943 0.638672 0.5 1.54152 0.5 2.75H1.5ZM1.50276 2.82401C1.50093 2.79963 1.5 2.77495 1.5 2.75H0.5C0.5 2.79989 0.501865 2.84946 0.505546 2.89864L1.50276 2.82401ZM1.00415 2.36133H1V3.36133H1.00415V2.36133ZM0.5 2.86133V4.36133H1.5V2.86133H0.5ZM0.5 4.36133C0.5 8.69351 2.80754 12.4809 6.23839 14.5874L6.76161 13.7352C3.61246 11.8017 1.5 8.32914 1.5 4.36133H0.5ZM6 14.1613V18.8613H7V14.1613H6ZM6.5 19.3613H21.5V18.3613H6.5V19.3613ZM22 18.8613V16.8613H21V18.8613H22ZM22 16.8613C22 16.0127 21.5709 15.3063 20.9646 14.7467C20.3617 14.1902 19.5508 13.7457 18.6872 13.3997C16.9607 12.7081 14.8975 12.3613 13.5 12.3613V13.3613C14.7725 13.3613 16.7093 13.6846 18.3153 14.328C19.1179 14.6495 19.8065 15.0387 20.2864 15.4816C20.7628 15.9213 21 16.38 21 16.8613H22ZM13.5 12.3613H13.25V13.3613H13.5V12.3613ZM13.25 12.3613C8.76676 12.3613 5 8.5759 5 4.36133H4C4 9.14676 8.23324 13.3613 13.25 13.3613V12.3613ZM5 4.36133V2.96152H4V4.36133H5ZM13.5 2.36133C12.3065 2.36133 11.1619 2.83543 10.318 3.67935L11.0251 4.38645C11.6815 3.73008 12.5717 3.36133 13.5 3.36133V2.36133ZM16.682 3.67935C15.8381 2.83543 14.6935 2.36133 13.5 2.36133V3.36133C14.4283 3.36133 15.3185 3.73008 15.9749 4.38645L16.682 3.67935ZM18 6.86133C18 5.66785 17.5259 4.52326 16.682 3.67935L15.9749 4.38645C16.6313 5.04283 17 5.93307 17 6.86133H18ZM16.682 10.0433C17.5259 9.1994 18 8.0548 18 6.86133H17C17 7.78959 16.6313 8.67982 15.9749 9.3362L16.682 10.0433ZM13.5 11.3613C14.6935 11.3613 15.8381 10.8872 16.682 10.0433L15.9749 9.3362C15.3185 9.99258 14.4283 10.3613 13.5 10.3613V11.3613ZM10.318 10.0433C11.1619 10.8872 12.3065 11.3613 13.5 11.3613V10.3613C12.5717 10.3613 11.6815 9.99258 11.0251 9.3362L10.318 10.0433ZM9 6.86133C9 8.0548 9.4741 9.1994 10.318 10.0433L11.0251 9.3362C10.3687 8.67982 10 7.78959 10 6.86133H9ZM10.318 3.67935C9.4741 4.52326 9 5.66785 9 6.86133H10C10 5.93307 10.3687 5.04283 11.0251 4.38645L10.318 3.67935Z" fill="#211F54"/>
+              </svg>
+              Member
+            </a>
+            <a href="broker.html">
+              <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.361 6.18081L24.5816 0.716406C24.5049 0.565349 24.3987 0.43064 24.2691 0.319972C24.1395 0.209303 23.9891 0.124842 23.8263 0.071413C23.6635 0.0179838 23.4917 -0.00336739 23.3205 0.00857867C23.1494 0.0205247 22.9823 0.065534 22.8288 0.141036L19.9742 1.54035L14.1083 0.0146049C14.037 -0.00402185 13.9619 -0.00402185 13.8906 0.0146049L8.02468 1.54035L5.17011 0.135679C5.01664 0.0601768 4.84955 0.0151675 4.6784 0.00322149C4.50725 -0.00872456 4.33538 0.0126266 4.17262 0.0660558C4.00985 0.119485 3.85937 0.203945 3.72977 0.314614C3.60018 0.425283 3.494 0.559992 3.41731 0.711048L0.637863 6.18081C0.561146 6.33185 0.515412 6.49629 0.503273 6.66473C0.491135 6.83317 0.51283 7.00232 0.567119 7.1625C0.621408 7.32269 0.707229 7.47079 0.819679 7.59833C0.932129 7.72587 1.06901 7.83037 1.22249 7.90585L4.19355 9.36838L10.263 13.6349C10.3073 13.6661 10.3572 13.6887 10.41 13.7013L17.3777 15.4156C17.4502 15.4343 17.5264 15.4343 17.5988 15.4155C17.6713 15.3967 17.7376 15.3599 17.7914 15.3085L23.838 9.35766L26.7775 7.9112C26.931 7.83572 27.0679 7.73123 27.1803 7.60369C27.2928 7.47614 27.3786 7.32805 27.4329 7.16786C27.4872 7.00767 27.5089 6.83853 27.4967 6.67009C27.4846 6.50165 27.4389 6.33721 27.3621 6.18617L27.361 6.18081ZM21.8087 10.1398L17.7587 6.9469C17.6749 6.88069 17.5691 6.84735 17.4618 6.85328C17.3545 6.85921 17.2532 6.90401 17.1774 6.97904C15.0555 9.08337 12.6767 8.81229 11.158 7.85763C11.102 7.82233 11.0549 7.77512 11.0201 7.71948C10.9852 7.66384 10.9635 7.6012 10.9565 7.53619C10.9491 7.47361 10.9561 7.41019 10.977 7.35064C10.998 7.29109 11.0323 7.23695 11.0774 7.19226L15.9177 2.57109H19.8273L23.0498 8.91515L21.8087 10.1398ZM1.39342 6.89118C1.3586 6.78505 1.3672 6.66974 1.41737 6.56975L4.20117 1.09463C4.23689 1.02387 4.29179 0.964209 4.3598 0.922233C4.42782 0.880257 4.5063 0.8576 4.58657 0.856766C4.65392 0.857169 4.72025 0.87294 4.78036 0.902838L7.39323 2.18858L4.22403 8.4255L1.61116 7.13976C1.56005 7.11443 1.51452 7.07945 1.47715 7.03679C1.43979 6.99414 1.41134 6.94466 1.39342 6.89118ZM17.3494 14.5253L10.7018 12.8892L4.97524 8.86372L8.27835 2.3568L13.9995 0.871766L17.2351 1.71393H15.7414C15.628 1.71382 15.519 1.75726 15.4376 1.835L10.4623 6.58475C10.3238 6.72102 10.2182 6.88618 10.1534 7.06802C10.0885 7.24986 10.066 7.44373 10.0876 7.63528C10.1091 7.82683 10.1741 8.01116 10.2778 8.17465C10.3815 8.33814 10.5212 8.4766 10.6865 8.57979C12.8509 9.9416 15.491 9.65124 17.5083 7.85013L21.1849 10.7495L17.3494 14.5253ZM26.6033 6.89118C26.5854 6.94466 26.5569 6.99414 26.5196 7.03679C26.4822 7.07945 26.4367 7.11443 26.3856 7.13976L23.7727 8.4255L20.6057 2.18858L23.2185 0.902838C23.3213 0.853579 23.4397 0.846082 23.5481 0.881965C23.6564 0.917848 23.7461 0.994233 23.7977 1.09463L26.5772 6.56439C26.6303 6.66532 26.6405 6.78286 26.6055 6.89118H26.6033ZM13.9929 17.6786C13.9688 17.7707 13.9141 17.8523 13.8376 17.9105C13.7612 17.9687 13.6672 18.0002 13.5705 18C13.5338 18.0002 13.4972 17.9959 13.4616 17.9871L8.92394 16.8696C8.87079 16.8568 8.82056 16.8343 8.77588 16.8032L5.90825 14.7856C5.81427 14.7196 5.7508 14.6195 5.73181 14.5073C5.71282 14.3952 5.73987 14.2803 5.807 14.1878C5.87413 14.0953 5.97585 14.0328 6.08978 14.0141C6.20371 13.9954 6.32051 14.0221 6.4145 14.0881L9.21463 16.0564L13.6783 17.1546C13.734 17.1685 13.7864 17.1931 13.8325 17.227C13.8785 17.2608 13.9173 17.3034 13.9465 17.3521C13.9758 17.4008 13.9949 17.4547 14.0029 17.5107C14.0109 17.5668 14.0075 17.6238 13.9929 17.6786Z" fill="#1B2A51"/>
+              </svg>
+              Broker
+            </a>
+            <a href="employer.html">
+              <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.75462 1.94265V0.856934H18.2443V1.94265H1.75462ZM1.83841 17.1426V10.6284H0.5V9.54265L1.75462 4.11408H18.2443L19.5 9.54265V10.6284H18.1605V17.1426H17.0724V10.6284H11.6317V17.1426H1.83841ZM2.92655 16.0569H10.5435V10.6284H2.92655V16.0569ZM1.59902 9.54265H18.3999L17.3901 5.19979H2.60881L1.59902 9.54265Z" fill="#211F54"/>
+              </svg>
+              Employer
+            </a>
+            <a href="provider.html">
+              <svg class="icon-provider" width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.5 17.5C16.5 14.672 16.5 13.257 15.621 12.379C14.743 11.5 13.328 11.5 10.5 11.5L8.5 13.5L6.5 11.5C3.672 11.5 2.257 11.5 1.379 12.379C0.5 13.257 0.5 14.672 0.5 17.5M12.5 14.5V17.5M14 16H11M12 5V4C12 3.54037 11.9095 3.08525 11.7336 2.66061C11.5577 2.23597 11.2999 1.85013 10.9749 1.52513C10.6499 1.20012 10.264 0.942313 9.83939 0.766422C9.41475 0.59053 8.95963 0.5 8.5 0.5C8.04037 0.5 7.58525 0.59053 7.16061 0.766422C6.73597 0.942313 6.35013 1.20012 6.02513 1.52513C5.70012 1.85013 5.44231 2.23597 5.26642 2.66061C5.09053 3.08525 5 3.54037 5 4V5C5 5.45963 5.09053 5.91475 5.26642 6.33939C5.44231 6.76403 5.70012 7.14987 6.02513 7.47487C6.35013 7.79988 6.73597 8.05769 7.16061 8.23358C7.58525 8.40947 8.04037 8.5 8.5 8.5C8.95963 8.5 9.41475 8.40947 9.83939 8.23358C10.264 8.05769 10.6499 7.79988 10.9749 7.47487C11.2999 7.14987 11.5577 6.76403 11.7336 6.33939C11.9095 5.91475 12 5.45963 12 5Z" stroke="#1B2A51" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Provider
+            </a>
+          </div>
+        </div>
+      </div>
+    </div><!-- .container -->
+
+    <div class="gradient-bg torn-edge torn-edge--grey">
+      <div class="container">
+        <div class="company-info">
+          <div class="text-center">
+            <img src="img/icons/leaf.svg" alt="">
+          </div>
+          <h1>Hi, we're <em><strong>Canopy Insurance.</strong></em></h1>
+
+          <p>
+            As your local partner for employee benefits, we understand what businesses here need, 
+            because we live and work in this community, too. At Canopy Insurance, we're all about 
+            empowering brokers, business owners, and members with a wide range of insurance 
+            products that cater to every aspect of life.
+          </p>
+          <p>
+            When you call us, you will always speak to a real person — 
+            no automated systems or call trees—ready to assist with your needs.
+          </p>
+          <p>
+            <em class="text-green text-semibold">Our mission?</em> <br>
+            <em class="text-medium">
+              To offer competitive and complete benefits packages that ensure your families get the protection they deserve, hassle-free.
+            </em>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="products products--full-width">
+        <div class="text-center">
+          <h3>Plans & Policies</h3>
+        </div>
+        <div class="products__grid">
+          <a class="products__item products__item--green" href="dental.html">
+            <img src="img/icons/dental.svg" alt="">
+            <strong>Dental  ➔</strong>
+          </a>
+          <a class="products__item products__item--blue" href="dental.html">
+            <img src="img/icons/vision.svg" alt="">
+            <strong>Vision  ➔</strong>
+          </a>
+          <a class="products__item products__item--brown" href="dental.html">
+            <img src="img/icons/accident.svg" alt="">
+            <strong>Accident & Illness ➔</strong>
+          </a>
+          <a class="products__item products__item--violet" href="dental.html">
+            <img src="img/icons/life.svg" alt="">
+            <strong>Life & Disability <span class="mobile-invisible">Insurance</span> ➔</strong>
+          </a>
+        </div>
+      </div><!-- .products -->
+
+      <div class="vision-plus">
+        <div class="vision-plus__img">
+          <img src="img/home/woman.png" alt="">
+        </div>
+        <div class="vision-plus__text rounded-block rounded-block--light-green-white rounded-block--big-reverse">
+          <img src="img/home/Vision_Plus.svg" alt="Vision Plus">
+          <p>
+            Backed by the extensive VSP network, 
+            <strong>VisionPlus</strong> offers a 
+            variety of plans designed to give your 
+            employees <strong class="text-black"><em>great eye care 
+            benefits and savings.</em></strong>
+          </p>
+          <a href="#" class="btn btn--transparent-white btn--small">Learn More ➔</a>
+        </div>
+      </div><!-- .vision-plus -->
+    </div><!-- .container -->
+    
+    <div class="contact-us">
+      <div class="container">
+        <div class="row contact-us__row">
+          <div class="contact-us__info">
+            <h3>Contact Us</h3>
+            <p class="sub-title">Partner with Canopy Insurance today!</p>
+
+            <p>
+              <a href="tel:2054510444"><img src="img/icons/phone.svg" alt=""> (205) 451-0444</a>
+            </p>
+            <p>
+              <a href="mailto:info@canopyinsurancecorp.com"><img src="img/icons/email.svg" alt=""> info@canopyinsurancecorp.com</a>
+            </p>
+          </div>
+
+          <div class="rounded-block rounded-block--middle rounded-block--white-violet">
+            <div class="contact-form">
+              <h4>Send a Message</h4>
+              <form action="#">
+                <div class="row">
+                  <div class="col">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" id="first-name"/>
+                  </div>
+                  <div class="col">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" id="last-name"/>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email"/>
+                  </div>
+                  <div class="col">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="(___) ___-___" maxlength="14"/>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message"></textarea>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <input type="submit" value="Submit" class="btn btn--violet-white">
+                </div>
+              </form>
+            </div>
+          </div><!-- .rounded-block -->
+
+        </div>
+      </div><!-- .container -->
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="mobile-visible">
+          <a href="index.html">
+            <img src="img/logo_white.svg" alt="Canopy Insurance">
+          </a>
+          <a href="provider-search.html" class="footer__search">
+            <img src="img/icons/search-white.svg" alt="Search">
+          </a>
+        </div>
+        <nav class="footer-nav js-accordion js-accordion--mobile">
+          <div class="footer-nav__item">
+            <h4 class="js-accordion-btn">I am a</h4>
+            <div class="footer-nav__submenu js-accordion-content">
+              <ul>
+                <li><a href="member.html">Member</a></li>
+                <li><a href="broker.html">Broker</a></li>
+                <li><a href="employer.html">Employer</a></li>
+                <li><a href="provider.html">Provider</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-nav__item">
+            <h4 class="js-accordion-btn">Products</h4>
+            <div class="footer-nav__submenu js-accordion-content">
+              <ul>
+                <li><a href="vison.html">Vison</a></li>
+                <li><a href="dental.html">Dental</a></li>
+                <li><a href="accident-illness.html">Accident & Illness</a></li>
+                <li><a href="disability-life.html">Disability & Life </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-nav__item">
+            <h4 class="js-accordion-btn">Resources</h4>
+            <div class="footer-nav__submenu js-accordion-content">
+              <ul>
+                <li><a href="provider-search.html">Provider Search</a></li>
+                <li><a href="forms-faqs.html">Forms & FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-nav__item">
+            <h4 class="js-accordion-btn">About Canopy</h4>
+            <div class="footer-nav__submenu js-accordion-content">
+              <ul>
+                <li><a href="about.html">Why Choose Us?</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-nav__item">
+            <div class="footer-nav__main-menu">
+              <ul>
+                <li><a href="provider-search.html">Provider Search</a></li>
+                <li><a href="login.html">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="mobile-invisible">
+          <a href="index.html">
+            <img src="img/logo_white.svg" alt="Canopy Insurance">
+          </a>
+          <a href="provider-search.html" class="footer__search">
+            <img src="img/icons/search-white.svg" alt="Search">
+          </a>
+        </div>
+        <div class="copy-menu">
+          <span>Copyright © 2025 Canopy Insurance</span>
+          <span class="copy-menu__line mobile-invisible">|</span>
+          <span>All Rights Reserved</span>
+          <span class="desktop-visible">|</span>
+          <a href="#">HIPAA Privacy Policy</a>
+          <span class="copy-menu__line">|</span>
+          <a href="#">GLB Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

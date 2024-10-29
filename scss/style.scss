@@ -724,9 +724,6 @@ h5 {
     .banner__text {
       right: auto;
       left: 22px;
-      &--accident {
-        left: 0;
-      }
     }
   }
 
@@ -737,16 +734,6 @@ h5 {
     &--home {
       width: 100%;
       height: 0;
-      @media (max-width: 1199px) and (min-width: 768px) {
-        padding-top: 58%;
-      }
-      @media (max-width: 767px) {
-        height: 452px;
-        border-radius: 30px;
-      }
-      @media (min-width: 1200px) {
-        padding-top: 52.2%;
-      }
     }
     img {
       position: absolute;
@@ -759,6 +746,10 @@ h5 {
       object-fit: cover;
     }
     @media (max-width: 767px) {
+      &--home {
+        height: 512px;
+        border-radius: 30px;
+      }
       &:not(.banner__img--home) {
         height: 0;
         width: 100%;
@@ -791,8 +782,22 @@ h5 {
       &--about {
         margin-top: 70px;
       }
+      &--home {
+        img {
+          position: relative;
+          left: -100px;
+          top: 0;
+          width: auto;
+          height: 150%;
+          transform: none;
+          object-fit: cover;
+        }
+      }
     }
     @media (min-width: 768px) and (max-width: 1199px) {
+      &--home {
+        padding-top: 58%;
+      }
       &:not(.banner__img--home) {
         max-width: 747px;
         width: 100%;
@@ -814,6 +819,9 @@ h5 {
       }
     }
     @media (min-width: 1200px) {
+      &--home {
+        padding-top: 52.2%;
+      }
       &:not(.banner__img--home) {
         width: 770px;
         height: 470px;
@@ -1048,14 +1056,23 @@ h5 {
   }
 
   @media (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
     &:not(.banner--about) {
       display: flex;
       justify-content: flex-end;
+      align-items: flex-end;
     }
   }
 
   @media (min-width: 1200px) {
     padding-bottom: 48px;
+    &--reverse {
+      .banner__text {
+        &--accident {
+          left: -20px;
+        }
+      }
+    }
   }
 }
 
@@ -2073,7 +2090,7 @@ h5 {
   }
   &__btn {
     position: relative;
-    padding-right: 24px;
+    padding-right: 36px;
     color: $greenText;
     padding-right: 1.5;
   }
